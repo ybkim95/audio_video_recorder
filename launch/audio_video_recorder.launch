@@ -1,22 +1,22 @@
 <launch>
-  <arg name="audio_topic_name" />
-  <arg name="image_topic_name" />
-  <arg name="queue_size" />
-  <arg name="file_name" />
-  <arg name="file_format" />
-  <arg name="audio_channels" />
-  <arg name="audio_sample_rate" />
-  <arg name="audio_format" />
-  <arg name="audio_sample_format" />
-  <arg name="video_height" />
-  <arg name="video_width" />
-  <arg name="video_framerate" />
-  <arg name="video_encoding" />
+  <arg name="audio_topic_name" default="/audio/audio" />
+  <arg name="image_topic_name" default="/usb_cam/image_raw" />
+  <arg name="queue_size" default="100" />
+  <arg name="file_name" default="/tmp/test1.avi" />
+  <arg name="file_format" default="avi" />
+  <arg name="audio_channels" default="1" />
+  <arg name="audio_sample_rate" default="44100" />
+  <arg name="audio_format" default="mp3" />
+  <arg name="audio_sample_format" default="S16LE" />
+  <arg name="video_height" default="480" />
+  <arg name="video_width" default="640" />
+  <arg name="video_framerate" default="30" />
+  <arg name="video_encoding" default="RGB" />
 
   <node name="audio_video_recorder" pkg="audio_video_recorder"
         type="audio_video_recorder" output="screen">
-    <remap from="~input/audio" to="$(arg audio_topic_name)" />
-    <remap from="~input/image" to="$(arg image_topic_name)" />
+    <remap from="~input/audio" to="/audio/audio" />
+    <remap from="~input/image" to="/usb_cam/image_raw" />
     <rosparam subst_value="true">
       queue_size: $(arg queue_size)
       file_name: $(arg file_name)
