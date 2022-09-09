@@ -1,16 +1,6 @@
 # audio_video_recorder
 
-## This package is now moved to [jsk-ros-pkg/jsk_common](https://github.com/jsk-ros-pkg/jsk_common/tree/master/audio_video_recorder)
-
-[![main](https://github.com/knorth55/audio_video_recorder/actions/workflows/main.yml/badge.svg)](https://github.com/knorth55/audio_video_recorder/actions/workflows/main.yml)
-[![linter](https://github.com/knorth55/audio_video_recorder/actions/workflows/linter.yaml/badge.svg)](https://github.com/knorth55/audio_video_recorder/actions/workflows/linter.yaml)
-
 ROS package for recording audio and video synchronously
-
-![[Full video on Google Drive](https://drive.google.com/file/d/1TWnRKbOdq6jPza82eNhhjn56lQXRxWjl/view?usp=sharing)
-](.media/pr2_sample.gif)
-
-[Full video on Google Drive](https://drive.google.com/file/d/1TWnRKbOdq6jPza82eNhhjn56lQXRxWjl/view?usp=sharing)
 
 ## Sample
 
